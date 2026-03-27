@@ -1,0 +1,6 @@
+test.parquet:将8种组合直接给出的测试集，共386条，直接来自add/test.parquet
+train.parquet:将8种组合直接给出的训练集，共3474条，直接来自add/train.parquet
+test_oracle.parquet:由test.parquet得到的带有oracle的数据集
+train_oracle.parquet:由train.parquet得到的带有oracle的数据集
+sample_1000.parquet:从train_oracle.parquet中随机提取的用于sft的数据集，共1000条
+sample_left.parquet:提取出sample_1000.parquet后剩余的数据集

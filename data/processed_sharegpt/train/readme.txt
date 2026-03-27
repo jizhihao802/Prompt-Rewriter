@@ -1,0 +1,13 @@
+train.parquet:第一版训练数据
+train2.parquet:第二版训练数据，共1023条
+train2_1024.parquet：第二版训练数据补够1024条
+train2_shuffle.parquet:第二版数据打乱三种方法的顺序，不进行修改固定为第四种选择
+train2_shuffle2.parquet:第二版数据方法顺序完全打乱
+train2_shuffle2_256.parquet:从train2_shuffle2.parquet提取256条（前1/4）用来生成微调数据
+train2_shuffle2_512.parquet:从train2_shuffle2.parquet提取512条（前1/2）用来生成微调数据
+train_sft.parquet:由train2_shuffle2_256.parquet生成的微调数据，共254条。
+train_sft2.parquet:由train2_shuffle2_512.parquet生成的微调数据，共509条
+train3.parquet:第三版训练数据，从train2_shuffle2.parquet中提取后512条，避免使用微调数据进行RL。
+train4.parquet:第四版训练数据，从train2_shuffle2.parquet中提取后768条，用于增加数据量训练第一次微调后模型
+train_grpo.parquet:对长度为768的train4.parquet数据集进行oracle预处理得到，共759条，用于进行grpo训练
+train_oracle.parquet:train_sft.parquet和train_grpo.parquet合并得到，完整的有oracle的训练数据，共1013条

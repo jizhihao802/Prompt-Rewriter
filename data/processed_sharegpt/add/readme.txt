@@ -1,0 +1,6 @@
+test.parquet:sharegpt_zh_38K_filtered_100_500_no_url.json(3860条)分割得到386条
+train.parquet:sharegpt_zh_38K_filtered_100_500_no_url.json(3860条)分割得到3474条
+test_shuffle.parquet:test.parquet打乱后的版本
+train_shuffle.parquet:train.parquet打乱后的版本
+test_shuffle_oracle.parquet:test_shuffle测试得到oracle的版本，共384条
+train_shuffle_oracle.parquet:train_shuffle测试得到oracle的版本，共3453条
